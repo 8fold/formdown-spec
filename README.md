@@ -26,4 +26,26 @@ Lists feel like lists, tables feel like tables, and footnotes feel like footnote
 
 As such, forms should feel like forms in plain text first. They just so happen to be easily converted to functional forms in HTML and other digital media capable of parsing the plain text, which is almost any digital media we have.
 
+## Contributing
+
+Anyone may contribute to the conversation by creating and replying to [issues](https://github.com/8fold/formdown-spec/issues) and [pull requests](https://github.com/8fold/formdown-spec/pulls).
+
+The scope of this specification is limited to form controls; therefore, conversation should revolve around those elements, their implementations, and translations.
+
+We prefer recommendations be presented in the form of a PR (with an Issue being a fallback). Pull requests should be made from a fork of this repository.
+
+## Semantic Versioning
+
+We are in a zero-major (0.x.x) where patterns are subject to change and release without much warning.
+
+What needs to happen for a true major release (1.0.0)?
+
+1. Specification used on at least one production site.
+2. Changes to the specification (merged PRs) are not made for at least 30 days.
+
+## Governance
+
+Benevolent dictatorship (@joshbruce) for now.
+
 [1]: This is a footnote in Markdown.
+
