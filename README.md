@@ -10,6 +10,8 @@ The flavors we seek inspiration from are:
 - [MultiMarkdown](https://fletcherpenney.net/multimarkdown/)
 - [CriticMarkup](http://criticmarkup.com)
 
+[Read the Formdown spec](https://github.com/joshbruce/formdown-spec/blob/master/spec.md).
+
 ## Why?
 
 Without interaction and the possibility of data collection or submission, a webpage is a uni-directional communication. The traditional way of accomplishing both of these in print and digitial is some type of form or input methdoology. (Even writing this sentence on thies computer fits that bill.)
