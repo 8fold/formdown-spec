@@ -186,7 +186,7 @@ Probably the most common element the `text input` field is denoted by being on i
 Note: It does not matter how many spaces are between the pipes so long as the line starts and ends with a pipe and has at least one leading space before any content between.
 
 ```markdown
-|               |
+|              |
 
 | Helo, World! |
 ```
@@ -220,5 +220,19 @@ Some input types are represented as text fields, but are a more specific type. T
 #### Phone number
 
 ```markdown
-|@#               |
+|@#              |
 ```
+
+### Textarea
+
+The `textarea` element represents multi-line text and uses the text field pattern as the base. For lack of a better explanation, if two or more text fields are placed on consecutive lines, they become a `textarea`.
+
+```markdown
+|              |
+|              |
+```
+
+```html
+<textarea required></textarea>
+```
+
