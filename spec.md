@@ -144,6 +144,8 @@ Postal code|code2
 If there's a zombie apocalypse that crashes the Internet chances are you wouldn't need to change your address, but let's say you do - the same, printed form could be used. And, if the web returns, any changes made over time can be updated and fed through the same code to generate an updated form.
 
 ```html
+<h1>Change of Address Form</h1
+<p>Please complete the following form to begin receiving mail at your <em>new</em> address.</p>
 <form>
     <label for="name">Name</label>
     <input id="name" name="name" type="text">
@@ -170,6 +172,7 @@ If there's a zombie apocalypse that crashes the Internet chances are you wouldn'
         <input id="code2" name="code2" type="text" requireds>
     </fieldset>
 </form>
+<p><strong>Note:</strong> You must drop this off at a post office or with a postal employee before this takes effect. You can also submit this online at our website.</p>
 ```
 
 Let's look at individual form elements.
