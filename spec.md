@@ -37,6 +37,8 @@ By encapsulating the form in a block, Formdown parsers can be written separately
 
 A form component is comprised of the HTML form element itself (ex. `input`) and the `label` for the element. A typical pattern for form components consists of linking the `label` and the element by way of three attributes. The `for` attribute goes on the `label` while the `id` and `name` attributes appear on the form element itself; typically with the same value for each. Formdown uses the pattern above along with whitespace to accomplish the same thing.
 
+The terminating character for form components is two line feed characters in a row (empty line between components).
+
 ```markdown
 ???
 Label|name
@@ -179,7 +181,15 @@ Let's look at individual form elements.
 
 ## Form Elements
 
-### Input (text)
+The terminating character for all form elements is a new line character.
+
+### Text Fields
+
+Text fields typically render to take strings as their input. HTML has multiple type declarations that allow clients to interpret and validate data in those fields. All text field types begin with a pipe character (|) followed by one or more potential characters and immediately followed by at least one empty space. ex. "| " or "|@# ". 
+
+The following types are not specified by Formdown: URL, Date, Month, Week, Time, Local Date and Time
+
+#### Input Text
 
 Probably the most common element the `text input` field is denoted by being on its own line and consisting of at least two pipes (vertical bars) separated by at least one space. To prefill the value, place text between the pipes with at least one leading space. 
 
@@ -197,33 +207,35 @@ Note: It does not matter how many spaces are between the pipes so long as the li
 <input type="text" value="Hello, World!" required>
 ```
 
-### Input (variable types)
-
-Some input types are represented as text fields, but are a more specific type. These more specific types help modern browsers validate the form for you. The following Formdown patterns can be used to achieve those more specific types.
-
-#### Email
-
-```markdown
-|@              |
-```
-
-```html
-<input type="email" required>
-```
-
-#### Number
+#### Input Number
 
 ```markdown
 |#               |
 ```
 
-#### Phone number
+```html
+<input type="number" required>
+```
+
+#### Input Email
+
+```markdown
+|@              |
+```
+
+#### Input Telephone
 
 ```markdown
 |@#              |
 ```
 
-### Textarea
+#### Input Password
+
+```markdown
+|*               |
+```
+
+#### Textarea
 
 The `textarea` element represents multi-line text and uses the text field pattern as the base. For lack of a better explanation, if two or more text fields are placed on consecutive lines, they become a `textarea`.
 
@@ -236,3 +248,123 @@ The `textarea` element represents multi-line text and uses the text field patter
 <textarea required></textarea>
 ```
 
+### Select Fields
+
+There are two main types of select methods on forms: single and multiple slection. In HTML there are four ways to render such select fields with two ways for each method.
+
+#### Input Radio Button (single)
+
+```markdown
+( )
+(x)
+```
+
+```html
+<input type="radio" required>
+<input type="radio" required checked>
+```
+
+#### Input Checkbox (multiple)
+
+```markdown
+[ ] 
+[x] 
+```
+
+```html
+<input type="checkbox" required>
+<input type="checkbox" required checked>
+```
+
+#### Select (single or multiple)
+
+```markdown
+{ }
+{x}
+```
+
+```html
+<select>
+    <option></option>
+</select>
+
+<select>
+    <option selected></option>
+</select>
+```
+
+```markdown
+[{ }]
+[{x}]
+```
+
+```html
+<select multiple>
+    <option></option>
+</select>
+
+<select multiple>
+    <option selected></option>
+</select>
+```
+
+### Buttons
+
+Buttons, as a purely interactive element become almost useless in a print format. However, buttons often represent a call to actuion as well: ex. Submit feedback. From an HTML perspective, there are five button variations, the standalone button element and four input types. Formdown only recognizes the button element and the reset input type.
+
+Therefore, the following button input type are not available in Formdown: Input Submit Button, Input Image Button, and Input Button.
+
+#### Button
+
+Each button begins with an equal sign (=) followed by a pipe (|) one or more empty spaces. Each button ends wtih one or more empty spaces followed by a pipe (|) followed immediately by an equal sign (=).
+
+```markdown
+=| submit |=
+```
+
+```html
+<button>submit</button>
+```
+
+#### Input Reset Button
+
+Each reset button begins with an equal sign (=) followed by two pipes (||) one or more empty spaces. Each reset button ends wtih one or more empty spaces followed by two pipes (||) followed immediately by an equal sign (=).
+
+```markdown
+=|| submit ||=
+```
+
+```html
+<input type="rest" value="submit">
+```
+
+### Other Form Controls and Elements
+
+#### File Upload
+
+```markdown
+|^
+```
+
+#### Range
+
+```markdown
+<- 0-100 ->
+```
+
+#### Color
+
+|% %|
+
+#### Fieldset
+
+```markdown
+--- Fieldset legend text ---
+---
+```
+
+```html
+<fieldset>
+    <legend>Fieldset legend text</legend>
+</fieldset>
+```
