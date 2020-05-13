@@ -181,7 +181,7 @@ Formdown only recognizes two, as the others can be achieved via attribute lists.
 #### Reset Button
 
 ```markdown
-}X submit X{
+}X reset X{
 ```
 
 ```html
