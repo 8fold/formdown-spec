@@ -10,7 +10,7 @@ The flavors we seek inspiration from are:
 - [MultiMarkdown](https://fletcherpenney.net/multimarkdown/)
 - [CriticMarkup](http://criticmarkup.com)
 
-[Read the Formdown spec](https://github.com/8fold/formdown-spec/blob/master/spec.md).
+[Read the Formdown spec](https://github.com/8fold/formdown-spec/blob/main/spec.md).
 
 ## Why?
 
