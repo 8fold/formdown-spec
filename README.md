@@ -10,13 +10,13 @@ The flavors we seek inspiration from are:
 - [MultiMarkdown](https://fletcherpenney.net/multimarkdown/)
 - [CriticMarkup](http://criticmarkup.com)
 
-[Read the Formdown spec](https://github.com/joshbruce/formdown-spec/blob/master/spec.md).
+[Read the Formdown spec](https://github.com/8fold/formdown-spec/blob/master/spec.md).
 
 ## Why?
 
 Without interaction and the possibility of data collection or submission, a webpage is a uni-directional communication. The traditional way of accomplishing both of these in print and digitial is some type of form or input methdoology. (Even writing this sentence on thies computer fits that bill.)
 
-HTML, while simple, robust, and powerful, is kind of annoying to write in and learn for the typical use case. The original Markdown simplified that with simple syntactic rules that have and continue to gain ubiquity. If you've ever surrounded a piece of text wtih asterisks to denote emphasis or change in volume, that's Markdown. A chicken and egg argument can be made probably, but let's just accept where we are.
+HTML, while simple, robust, and powerful, is kind of annoying to write and learn for the typical use case. The original Markdown simplified that with simple syntactic rules that have and continue to gain ubiquity. If you've ever surrounded a piece of text wtih asterisks to denote emphasis or change in volume, that's Markdown. A chicken and egg argument can be made probably, but let's just accept where we are.
 
 As time progressed more elements were added to Markdown to cover more use cases, most notably for our purposes is that of tables and footnotes. What we haven't seen is wide adoption of a specification that could be used to generate forms.
 
